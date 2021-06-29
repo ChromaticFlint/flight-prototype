@@ -7,7 +7,8 @@ public class PlayerController : MonoBehaviour
 
   // Gameplay Variables
   public float speed = 5.0f;
-  // public float powerupDuration = 5.0f;
+  public float fireRate = 1.0f;
+  private float timer;
 
   // State Managers
 
@@ -34,6 +35,7 @@ public class PlayerController : MonoBehaviour
   void Update()
   {
     HandleMovement();
+    FireProjectiles();
   }
 
   void HandleMovement()
@@ -70,13 +72,19 @@ public class PlayerController : MonoBehaviour
     }
   }
 
-  // void OnTriggerEnter(Collider other)
-  // {
-  //   if (other.CompareTag("Powerup"))
-  //   {
-  //     hasPowerup = true;
-  //     Destroy(other.gameObject);
-  //     StartCoroutine(PowerupCooldownRoutine());
-  //   }
-  // }
+  void FireProjectiles()
+  {
+    timer += Time.deltaTime;
+
+    if (timer > fireRate)
+    {
+      GameObject pooledProjectile = ObjectPooler.SharedInstance.GetPooledObject();
+      if (pooledProjectile != null)
+      {
+        pooledProjectile.SetActive(true); // activate it
+        pooledProjectile.transform.position = transform.position; // position it at player
+      }
+      timer = 0;
+    }
+  }
 }
