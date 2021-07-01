@@ -2116,3 +2116,24 @@ Received Import Request.
 Start importing Assets/Scripts/Other/DeactivateOutOfBounds.cs using Guid(c7ca8763db76a45a5b1bd46e4755a4ba) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'eb771637318f469c70ff3a073106e2ee') in 0.004319 seconds
   Import took 0.007664 seconds .
 
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.000692 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for OSXStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 0.33 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.915 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.30 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1834 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 186.2 MB.
+System memory in use after: 185.6 MB.
+
+Unloading 24 unused Assets to reduce memory usage. Loaded Objects now: 2630.
+Total: 2.155729 ms (FindLiveObjects: 0.277234 ms CreateObjectMapping: 0.069286 ms MarkObjects: 1.455722 ms  DeleteObjects: 0.352390 ms)
+
