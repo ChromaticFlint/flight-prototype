@@ -20,6 +20,9 @@ public abstract class BaseEnemyController : MonoBehaviour, IDamagable, IKillable
   [SerializeField]
   protected float fireRate;
 
+  [SerializeField]
+  protected float rotation;
+
   protected void Awake()
   {
     currentHealth = health;
@@ -46,4 +49,13 @@ public abstract class BaseEnemyController : MonoBehaviour, IDamagable, IKillable
   // Require Collision Detection
   protected abstract void OnCollisionEnter2D(Collision2D collision);
 
+  public void SetMovementSpeed(int speed)
+  {
+    movementSpeed = speed;
+  }
+
+  public void SetRotation(int rotationSpeed)
+  {
+    rotation = rotationSpeed;
+  }
 }

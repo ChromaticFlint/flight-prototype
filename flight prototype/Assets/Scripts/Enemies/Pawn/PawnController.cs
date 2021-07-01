@@ -9,7 +9,8 @@ public class PawnController : BaseEnemyController, iPathable
   {
     // Sets health to current health
     base.Awake();
-    pawnWeapon = GameObject.Find("PawnWeapon").GetComponent<PawnWeaponController>();
+
+    pawnWeapon = transform.Find("PawnWeapon").GetComponent<PawnWeaponController>();
   }
 
   new void LateUpdate()
@@ -17,6 +18,7 @@ public class PawnController : BaseEnemyController, iPathable
     // Death Trigger and Movement Style
     base.LateUpdate();
     pawnWeapon.FireProjectiles(fireRate);
+    MovementStyle();
   }
 
   protected override void OnCollisionEnter2D(Collision2D collision)

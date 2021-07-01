@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class DeactivateOutOfBounds : MonoBehaviour
 {
-  private float topBound = 5;
-  private float lowerBound = -5;
+  private float topBound = 10;
+  private float lowerBound = -6;
 
   // Start is called before the first frame update
   void Start()

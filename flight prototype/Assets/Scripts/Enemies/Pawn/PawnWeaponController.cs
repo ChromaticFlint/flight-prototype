@@ -27,6 +27,7 @@ public class PawnWeaponController : BaseEnemyWeaponController
       {
         pooledProjectile.SetActive(true); // activate it
         pooledProjectile.transform.position = transform.position; // position it at enemy weapon
+        pooledProjectile.transform.rotation = transform.rotation; // rotate it based on enemy weapon
       }
       timer = 0;
     }
