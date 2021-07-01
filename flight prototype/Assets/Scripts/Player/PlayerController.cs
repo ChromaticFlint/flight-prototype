@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerController : MonoBehaviour, IDamagable
+public class PlayerController : MonoBehaviour, IKillable
 {
 
   // Gameplay Variables
@@ -11,6 +11,7 @@ public class PlayerController : MonoBehaviour, IDamagable
   private float timer;
 
   // State Managers
+
 
   // Map Boundaries
   private float maxHeight = 3.5f;
@@ -73,8 +74,19 @@ public class PlayerController : MonoBehaviour, IDamagable
     }
   }
 
-  public void TakeDamage(int damage)
+  public void Killed()
   {
-    throw new System.NotImplementedException();
+    Destroy(gameObject);
+  }
+
+  void OnCollisionEnter2D(Collision2D collision)
+  {
+
+    if (collision.gameObject.CompareTag("Enemy Bullet"))
+    {
+      collision.gameObject.SetActive(false);
+      Killed();
+    }
+
   }
 }
