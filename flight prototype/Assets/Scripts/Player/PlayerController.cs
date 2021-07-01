@@ -25,12 +25,14 @@ public class PlayerController : MonoBehaviour, IKillable
   // Components and GameObjects
   private Rigidbody playerRb;
   private PlayerWeaponController playerWeapon;
+  private SandboxManager sandboxManager;
 
 
   // Start is called before the first frame update
   void Start()
   {
     playerWeapon = GameObject.Find("PlayerWeapon").GetComponent<PlayerWeaponController>();
+    sandboxManager = GameObject.Find("SandboxManager").GetComponent<SandboxManager>();
   }
 
   // Update is called once per frame
@@ -76,7 +78,10 @@ public class PlayerController : MonoBehaviour, IKillable
 
   public void Killed()
   {
-    Destroy(gameObject);
+    if (!sandboxManager.godModeEnabled)
+    {
+      Destroy(gameObject);
+    }
   }
 
   void OnCollisionEnter2D(Collision2D collision)
