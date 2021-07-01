@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerController : MonoBehaviour
+public class PlayerController : MonoBehaviour, IDamagable
 {
 
   // Gameplay Variables
@@ -23,19 +23,20 @@ public class PlayerController : MonoBehaviour
 
   // Components and GameObjects
   private Rigidbody playerRb;
-  public GameObject projectilePrefab;
+  private PlayerWeaponController playerWeapon;
+
 
   // Start is called before the first frame update
   void Start()
   {
-    playerRb = GetComponent<Rigidbody>();
+    playerWeapon = GameObject.Find("PlayerWeapon").GetComponent<PlayerWeaponController>();
   }
 
   // Update is called once per frame
   void Update()
   {
     HandleMovement();
-    FireProjectiles();
+    playerWeapon.FireProjectiles(fireRate);
   }
 
   void HandleMovement()
@@ -72,19 +73,8 @@ public class PlayerController : MonoBehaviour
     }
   }
 
-  void FireProjectiles()
+  public void TakeDamage(int damage)
   {
-    timer += Time.deltaTime;
-
-    if (timer > fireRate)
-    {
-      GameObject pooledProjectile = ObjectPooler.SharedInstance.GetPooledObject();
-      if (pooledProjectile != null)
-      {
-        pooledProjectile.SetActive(true); // activate it
-        pooledProjectile.transform.position = transform.position; // position it at player
-      }
-      timer = 0;
-    }
+    throw new System.NotImplementedException();
   }
 }
