@@ -31,4 +31,5 @@ public class SpawnManager : MonoBehaviour
 
     Instantiate(enemy, spawnPosition, spawnAngle);
   }
+
 }

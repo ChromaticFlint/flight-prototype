@@ -79,9 +79,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemyWeapon: {fileID: 157994634}
   health: 1
-  movementSpeed: 0
+  movementSpeed: 3
   currentHealth: 0
   fireRate: 0
+  rotation: 0
 --- !u!61 &2611569515370212657
 BoxCollider2D:
   m_ObjectHideFlags: 0

@@ -14,6 +14,7 @@ public class KnightController : BaseEnemyController
   {
     // Death Trigger and Movement Style
     base.LateUpdate();
+    MovementStyle();
   }
 
   protected override void OnCollisionEnter2D(Collision2D collision)
