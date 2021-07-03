@@ -58,6 +58,7 @@ public class SandboxManager : MonoBehaviour
 
   // Componenets
   private SpawnManager spawnManager;
+  private SpawnSequencerDataHandler spawnSequencerData;
 
   // Start is called before the first frame update
   void Start()
@@ -90,10 +91,38 @@ public class SandboxManager : MonoBehaviour
 
   public void SpawnEnemyActivate()
   {
-    // TODO add validation for text
-    int posX = Int32.Parse(spawnPostionX.text);
-    int posY = Int32.Parse(spawnPostionY.text);
-    int angle = Int32.Parse(spawnRotation.text);
+    int posX = validateXPosition(spawnPostionX.text);
+    int posY = validateYPosition(spawnPostionY.text);
+    int angle = validateRotation(spawnRotation.text);
+
+    Vector3 spawnPos = new Vector3(posX, posY, 0);
+    int rotationAngle = angle;
+
+    spawnManager.SpawnEnemy(spawnPos, rotationAngle, getDropDownEnemyIndex());
+
+    // Testing -- delete me
+    SpawnSequencerDataHandler test = setSpawnData();
+    test.StoreSpawnData(1, 1);
+    Debug.Log(test.accessSpawnData(1, 1));
+    // End Testing
+  }
+
+  public SpawnSequencerDataHandler setSpawnData()
+  {
+    SpawnSequencerDataHandler data = new SpawnSequencerDataHandler(
+      validateXPosition(spawnPostionX.text),
+      validateYPosition(spawnPostionY.text),
+      validateRotation(spawnRotation.text),
+      getDropDownEnemyIndex()
+    );
+
+    return data;
+  }
+
+  private int validateXPosition(string text)
+  {
+    // This is not great, fix later
+    int posX = Int32.Parse(text);
 
     if (Math.Abs(posX) > 8)
     {
@@ -101,11 +130,27 @@ public class SandboxManager : MonoBehaviour
       spawnPostionX.text = posX.ToString();
     }
 
+    return posX;
+  }
+
+  private int validateYPosition(string text)
+  {
+    // This is not great, fix later
+    int posY = Int32.Parse(spawnPostionY.text);
+
     if (posY <= 0 || posY >= 5)
     {
       posY = 5;
       spawnPostionY.text = posY.ToString();
     }
+
+    return posY;
+  }
+
+  private int validateRotation(string text)
+  {
+    // This is not great, fix later
+    int angle = Int32.Parse(spawnRotation.text);
 
     if (angle < -90 || angle > 90)
     {
@@ -113,10 +158,7 @@ public class SandboxManager : MonoBehaviour
       spawnRotation.text = angle.ToString();
     }
 
-    Vector3 spawnPos = new Vector3(posX, posY, 0);
-    int rotationAngle = angle;
-
-    spawnManager.SpawnEnemy(spawnPos, rotationAngle, getDropDownEnemyIndex());
+    return angle;
   }
 
 
@@ -138,4 +180,5 @@ public class SandboxManager : MonoBehaviour
     string enemyName = spawnType.options[spawnType.value].text;
     return spawnType.options.FindIndex((i) => { return i.text.Equals($"{enemyName}"); });
   }
+
 }
