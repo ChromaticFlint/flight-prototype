@@ -8,16 +8,55 @@ using System;
 public class SandboxManager : MonoBehaviour
 {
 
+  // Player Options
   public Toggle godModeToggle;
   public bool godModeEnabled = true;
+  public TMP_Dropdown firePattern;
+  public Slider fireRate;
 
+  // Spawn input fields
   public TMP_InputField spawnPostionX;
   public TMP_InputField spawnPostionY;
   public TMP_InputField spawnRotation;
   public TMP_Dropdown spawnType;
 
-  public Button testSpawnEnemy;
+  // Spawn Sequencer buttons and fields -- This could probably be more efficient
+  public Button[] seqWaveOneStorage;
+  public Button seqWaveOneLaunch;
+  public InputField seqWaveOneDelay;
+  public Button seqWaveOneClear;
 
+  public Button[] seqWaveTwoStorage;
+  public Button seqWaveTwoLaunch;
+  public InputField seqWaveTwoDelay;
+  public Button seqWaveTwoClear;
+
+  public Button[] seqWaveThreeStorage;
+  public Button seqWaveThreeLaunch;
+  public InputField seqWaveThreeDelay;
+  public Button seqWaveThreeClear;
+
+  public Button[] seqWaveFourStorage;
+  public Button seqWaveFourLaunch;
+  public InputField seqWaveFourDelay;
+  public Button seqWaveFourClear;
+
+  public Button[] seqWaveFiveStorage;
+  public Button seqWaveFiveLaunch;
+  public InputField seqWaveFiveDelay;
+  public Button seqWaveFiveClear;
+
+  public Button[] seqWaveSixStorage;
+  public Button seqWaveSixLaunch;
+  public InputField seqWaveSixDelay;
+  public Button seqWaveSixClear;
+
+  // Bottom Buttons
+  public Button testSpawnEnemy;
+  public Button testSpawnSequence;
+  public Button exitToMenu;
+
+  // Componenets
   private SpawnManager spawnManager;
 
   // Start is called before the first frame update
