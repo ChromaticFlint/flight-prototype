@@ -3,57 +3,53 @@ using System.Collections;
 using System;
 using UnityEngine;
 
-public class SpawnSequencerDataHandler
+public class SpawnSequencerDataType
 {
-  int SpawnPostitionX { get; set; }
+  // Move the weak validation from SandboxManager to here later
+  int SpawnPositionX { get; set; }
   int SpawnPositionY { get; set; }
   int SpawnRotation { get; set; }
   int SpawnType { get; set; }
 
-  public SpawnSequencerDataHandler(
+  public SpawnSequencerDataType(
     int spawnPostionX,
     int spawnPositionY,
     int spawnRotation,
     int spawnType)
   {
-    SpawnPostitionX = spawnPostionX;
+    SpawnPositionX = spawnPostionX;
     SpawnPositionY = spawnPositionY;
     SpawnRotation = spawnRotation;
     SpawnType = spawnType;
   }
 
-  List<SpawnSequencerDataHandler> waveOneData = new List<SpawnSequencerDataHandler>();
-  List<SpawnSequencerDataHandler> waveTwoData = new List<SpawnSequencerDataHandler>();
-  List<SpawnSequencerDataHandler> waveThreeData = new List<SpawnSequencerDataHandler>();
-  List<SpawnSequencerDataHandler> waveFourData = new List<SpawnSequencerDataHandler>();
-  List<SpawnSequencerDataHandler> waveFiveData = new List<SpawnSequencerDataHandler>();
-  List<SpawnSequencerDataHandler> waveSixData = new List<SpawnSequencerDataHandler>();
-
-  List<List<SpawnSequencerDataHandler>> fullSequenceData = new List<List<SpawnSequencerDataHandler>>();
-
-  public void StoreSpawnData(int wave, int slot)
+  public SpawnSequencerDataType LogData()
   {
-    fullSequenceData[wave - 1][slot - 1] = this;
+    Debug.Log(SpawnPositionX);
+    Debug.Log(SpawnPositionY);
+    Debug.Log(SpawnRotation);
+    Debug.Log(SpawnType);
+
+    return null;
   }
 
-  public SpawnSequencerDataHandler accessSpawnData(int wave, int slot)
+  public int GetX()
   {
-    if (fullSequenceData[wave - 1][slot - 1] != null)
-      return fullSequenceData[wave][slot];
-    else
-    {
-      Debug.Log("This is an empty slot");
-      return null;
-    }
+    return SpawnPositionX;
   }
 
-  public void InitializeDataStorage()
+  public int GetY()
   {
-    fullSequenceData.Add(waveOneData);
-    fullSequenceData.Add(waveTwoData);
-    fullSequenceData.Add(waveThreeData);
-    fullSequenceData.Add(waveFourData);
-    fullSequenceData.Add(waveFiveData);
-    fullSequenceData.Add(waveSixData);
+    return SpawnPositionY;
+  }
+
+  public int GetRot()
+  {
+    return SpawnRotation;
+  }
+
+  public int GetType()
+  {
+    return SpawnType;
   }
 }

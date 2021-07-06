@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
 using System;
+using UnityEngine.EventSystems;
 
 public class SandboxManager : MonoBehaviour
 {
@@ -58,7 +59,7 @@ public class SandboxManager : MonoBehaviour
 
   // Componenets
   private SpawnManager spawnManager;
-  private SpawnSequencerDataHandler spawnSequencerData;
+  private SpawnSequenceData spawnSequenceData = new SpawnSequenceData();
 
   // Start is called before the first frame update
   void Start()
@@ -69,6 +70,8 @@ public class SandboxManager : MonoBehaviour
     spawnPostionX.text = "0";
     spawnPostionY.text = "5";
     spawnRotation.text = "0";
+
+    spawnSequenceData.InitializeDataStorage();
   }
 
   // Update is called once per frame
@@ -91,35 +94,67 @@ public class SandboxManager : MonoBehaviour
 
   public void SpawnEnemyActivate()
   {
-    int posX = validateXPosition(spawnPostionX.text);
-    int posY = validateYPosition(spawnPostionY.text);
-    int angle = validateRotation(spawnRotation.text);
+    int posX = ValidateXPosition(spawnPostionX.text);
+    int posY = ValidateYPosition(spawnPostionY.text);
+    int angle = ValidateRotation(spawnRotation.text);
 
     Vector3 spawnPos = new Vector3(posX, posY, 0);
     int rotationAngle = angle;
 
     spawnManager.SpawnEnemy(spawnPos, rotationAngle, getDropDownEnemyIndex());
 
-    // Testing -- delete me
-    SpawnSequencerDataHandler test = setSpawnData();
-    test.StoreSpawnData(1, 1);
-    Debug.Log(test.accessSpawnData(1, 1));
-    // End Testing
+    SendFieldDataToStorage(1, 1);
+
+    SpawnSequencerDataType test = spawnSequenceData.AccessSpawnData(1, 1);
+
+    Debug.Log("This is the true test");
+    // This is the true test
+    test.LogData();
   }
 
-  public SpawnSequencerDataHandler setSpawnData()
+  public void SetFieldsToButton()
   {
-    SpawnSequencerDataHandler data = new SpawnSequencerDataHandler(
-      validateXPosition(spawnPostionX.text),
-      validateYPosition(spawnPostionY.text),
-      validateRotation(spawnRotation.text),
+    string buttonName = EventSystem.current.currentSelectedGameObject.name;
+    string[] splitString = buttonName.Split('.');
+
+    int wave = Int32.Parse(splitString[0]);
+    int slot = Int32.Parse(splitString[1]);
+
+    Debug.Log($"Button - Wave: {wave}, Slot: {slot} was selected");
+
+    SendFieldDataToStorage(wave, slot);
+  }
+
+  public void SpawnWave()
+  {
+    Debug.Log("Wave was spawned");
+  }
+
+  private SpawnSequencerDataType CreateSpawnDataFromFields()
+  {
+    SpawnSequencerDataType data = new SpawnSequencerDataType(
+      ValidateXPosition(spawnPostionX.text),
+      ValidateYPosition(spawnPostionY.text),
+      ValidateRotation(spawnRotation.text),
       getDropDownEnemyIndex()
     );
 
     return data;
   }
 
-  private int validateXPosition(string text)
+  private void SendFieldDataToStorage(int wave, int slot)
+  {
+    SpawnSequencerDataType data = CreateSpawnDataFromFields();
+    spawnSequenceData.StoreSpawnData(data, wave, slot);
+  }
+
+  public SpawnSequencerDataType getFieldDataFromStorage(int wave, int slot)
+  {
+    return spawnSequenceData.AccessSpawnData(wave, slot);
+  }
+
+  // Change this validation to the DataType later
+  private int ValidateXPosition(string text)
   {
     // This is not great, fix later
     int posX = Int32.Parse(text);
@@ -133,7 +168,8 @@ public class SandboxManager : MonoBehaviour
     return posX;
   }
 
-  private int validateYPosition(string text)
+  // Change this validation to the DataTypeHandler
+  private int ValidateYPosition(string text)
   {
     // This is not great, fix later
     int posY = Int32.Parse(spawnPostionY.text);
@@ -147,7 +183,8 @@ public class SandboxManager : MonoBehaviour
     return posY;
   }
 
-  private int validateRotation(string text)
+  // Change this validation to the DataTypeHandler
+  private int ValidateRotation(string text)
   {
     // This is not great, fix later
     int angle = Int32.Parse(spawnRotation.text);
