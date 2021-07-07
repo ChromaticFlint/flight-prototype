@@ -71,6 +71,13 @@ public class SandboxManager : MonoBehaviour
     spawnPostionY.text = "5";
     spawnRotation.text = "0";
 
+    seqWaveOneDelay.text = "0";
+    seqWaveTwoDelay.text = "0";
+    seqWaveThreeDelay.text = "0";
+    seqWaveFourDelay.text = "0";
+    seqWaveFiveDelay.text = "0";
+    seqWaveSixDelay.text = "0";
+
     spawnSequenceData.InitializeDataStorage();
   }
 
@@ -126,6 +133,10 @@ public class SandboxManager : MonoBehaviour
     SendFieldDataToStorage(wave, slot);
   }
 
+  // todo invert x and rot values in fields method
+  // todo right click investication for clear field
+  // todo change spawn values to sliders or ints
+
   public void SpawnWave()
   {
     // Button names in "SpawnWave.waveNumber" e.g. "SpawnWave.1" format
@@ -146,9 +157,39 @@ public class SandboxManager : MonoBehaviour
     }
   }
 
+  public void SpawnWave(int waveNumber)
+  {
+    int wave = waveNumber;
+
+    Debug.Log($"Wave {wave} was spawned");
+
+    foreach (SpawnSequencerDataType item in spawnSequenceData.AccessWaveData(wave))
+    {
+      if (item != null)
+      {
+        Vector3 spawnPos = new Vector3(item.GetX(), item.GetY(), 0);
+
+        spawnManager.SpawnEnemy(spawnPos, item.GetRot(), item.GetType());
+      }
+    }
+  }
+
   public void SpawnSequence()
   {
+    List<int> delays = delayList();
+    int wave = 1;
 
+    foreach (IList item in spawnSequenceData.AccessSequenceData())
+    {
+      StartCoroutine(SpawnWaveWithDelay(delays[wave - 1], wave));
+      wave++;
+    }
+  }
+
+  IEnumerator SpawnWaveWithDelay(int timer, int wave)
+  {
+    yield return new WaitForSeconds(timer);
+    SpawnWave(wave);
   }
 
   private string GetButtonName()
@@ -249,4 +290,17 @@ public class SandboxManager : MonoBehaviour
     return spawnType.options.FindIndex((i) => { return i.text.Equals($"{enemyName}"); });
   }
 
+  private List<int> delayList()
+  {
+    List<int> delays = new List<int>();
+
+    delays.Add(int.Parse(seqWaveOneDelay.text));
+    delays.Add(int.Parse(seqWaveTwoDelay.text));
+    delays.Add(int.Parse(seqWaveThreeDelay.text));
+    delays.Add(int.Parse(seqWaveFourDelay.text));
+    delays.Add(int.Parse(seqWaveFiveDelay.text));
+    delays.Add(int.Parse(seqWaveSixDelay.text));
+
+    return delays;
+  }
 }

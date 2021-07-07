@@ -93,4 +93,9 @@ public class SpawnSequenceData
 
     return FullSequenceData[Wave];
   }
+
+  public IList AccessSequenceData()
+  {
+    return FullSequenceData;
+  }
 }

@@ -707,7 +707,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 70642848}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 2121147618}
+        m_TargetAssemblyTypeName: SandboxManager, Assembly-CSharp
+        m_MethodName: SetFieldsToButton
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &70642848
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1096,7 +1108,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 127427520}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 2121147618}
+        m_TargetAssemblyTypeName: SandboxManager, Assembly-CSharp
+        m_MethodName: SetFieldsToButton
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &127427520
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1628,7 +1652,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 183731373}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 2121147618}
+        m_TargetAssemblyTypeName: SandboxManager, Assembly-CSharp
+        m_MethodName: SetFieldsToButton
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &183731373
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2150,7 +2186,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 235771002}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 2121147618}
+        m_TargetAssemblyTypeName: SandboxManager, Assembly-CSharp
+        m_MethodName: SetFieldsToButton
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &235771002
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2323,7 +2371,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 259680348}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 2121147618}
+        m_TargetAssemblyTypeName: SandboxManager, Assembly-CSharp
+        m_MethodName: SpawnWave
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &259680348
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2578,7 +2638,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 286297730}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 2121147618}
+        m_TargetAssemblyTypeName: SandboxManager, Assembly-CSharp
+        m_MethodName: SpawnWave
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &286297730
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3059,7 +3131,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 346780709}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 2121147618}
+        m_TargetAssemblyTypeName: SandboxManager, Assembly-CSharp
+        m_MethodName: SpawnWave
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &346780709
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4458,7 +4542,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 456413374}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 2121147618}
+        m_TargetAssemblyTypeName: SandboxManager, Assembly-CSharp
+        m_MethodName: SetFieldsToButton
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &456413374
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4792,7 +4888,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 466993757}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 2121147618}
+        m_TargetAssemblyTypeName: SandboxManager, Assembly-CSharp
+        m_MethodName: SetFieldsToButton
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &466993757
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5034,7 +5142,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 482913410}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 2121147618}
+        m_TargetAssemblyTypeName: SandboxManager, Assembly-CSharp
+        m_MethodName: SpawnSequence
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &482913410
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6415,7 +6535,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 582796604}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 2121147618}
+        m_TargetAssemblyTypeName: SandboxManager, Assembly-CSharp
+        m_MethodName: SetFieldsToButton
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &582796604
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6760,7 +6892,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 618064091}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 2121147618}
+        m_TargetAssemblyTypeName: SandboxManager, Assembly-CSharp
+        m_MethodName: SpawnWave
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &618064091
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6881,7 +7025,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 642397476}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 2121147618}
+        m_TargetAssemblyTypeName: SandboxManager, Assembly-CSharp
+        m_MethodName: SetFieldsToButton
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &642397476
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7918,7 +8074,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 699699678}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 2121147618}
+        m_TargetAssemblyTypeName: SandboxManager, Assembly-CSharp
+        m_MethodName: SpawnWave
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &699699678
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8570,7 +8738,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 796805422}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 2121147618}
+        m_TargetAssemblyTypeName: SandboxManager, Assembly-CSharp
+        m_MethodName: SetFieldsToButton
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &796805422
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8944,7 +9124,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 814473759}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 2121147618}
+        m_TargetAssemblyTypeName: SandboxManager, Assembly-CSharp
+        m_MethodName: SetFieldsToButton
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &814473759
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9557,7 +9749,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 868109763}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 2121147618}
+        m_TargetAssemblyTypeName: SandboxManager, Assembly-CSharp
+        m_MethodName: SetFieldsToButton
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &868109763
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9678,7 +9882,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 874490990}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 2121147618}
+        m_TargetAssemblyTypeName: SandboxManager, Assembly-CSharp
+        m_MethodName: SetFieldsToButton
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &874490990
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10024,7 +10240,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 920322258}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 2121147618}
+        m_TargetAssemblyTypeName: SandboxManager, Assembly-CSharp
+        m_MethodName: SetFieldsToButton
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &920322258
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10486,7 +10714,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1004632925}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 2121147618}
+        m_TargetAssemblyTypeName: SandboxManager, Assembly-CSharp
+        m_MethodName: SetFieldsToButton
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1004632925
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12844,7 +13084,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1268586926}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 2121147618}
+        m_TargetAssemblyTypeName: SandboxManager, Assembly-CSharp
+        m_MethodName: SetFieldsToButton
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1268586926
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13605,7 +13857,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1316848436}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 2121147618}
+        m_TargetAssemblyTypeName: SandboxManager, Assembly-CSharp
+        m_MethodName: SetFieldsToButton
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1316848436
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -14255,7 +14519,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1411676525}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 2121147618}
+        m_TargetAssemblyTypeName: SandboxManager, Assembly-CSharp
+        m_MethodName: SetFieldsToButton
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1411676525
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15375,7 +15651,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1585597918}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 2121147618}
+        m_TargetAssemblyTypeName: SandboxManager, Assembly-CSharp
+        m_MethodName: SetFieldsToButton
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1585597918
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15617,7 +15905,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1593947398}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 2121147618}
+        m_TargetAssemblyTypeName: SandboxManager, Assembly-CSharp
+        m_MethodName: SetFieldsToButton
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1593947398
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -17071,7 +17371,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1697468912}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 2121147618}
+        m_TargetAssemblyTypeName: SandboxManager, Assembly-CSharp
+        m_MethodName: SetFieldsToButton
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1697468912
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -17659,7 +17971,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1763222964}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 2121147618}
+        m_TargetAssemblyTypeName: SandboxManager, Assembly-CSharp
+        m_MethodName: SetFieldsToButton
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1763222964
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -18856,7 +19180,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1807711953}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 2121147618}
+        m_TargetAssemblyTypeName: SandboxManager, Assembly-CSharp
+        m_MethodName: SetFieldsToButton
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1807711953
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -19056,7 +19392,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1830116203}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 2121147618}
+        m_TargetAssemblyTypeName: SandboxManager, Assembly-CSharp
+        m_MethodName: SetFieldsToButton
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1830116203
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -19488,7 +19836,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1838402816}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 2121147618}
+        m_TargetAssemblyTypeName: SandboxManager, Assembly-CSharp
+        m_MethodName: SetFieldsToButton
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1838402816
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -19822,7 +20182,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1866414300}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 2121147618}
+        m_TargetAssemblyTypeName: SandboxManager, Assembly-CSharp
+        m_MethodName: SetFieldsToButton
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1866414300
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -20655,7 +21027,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1927663244}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 2121147618}
+        m_TargetAssemblyTypeName: SandboxManager, Assembly-CSharp
+        m_MethodName: SetFieldsToButton
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1927663244
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -21422,7 +21806,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1987303390}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 2121147618}
+        m_TargetAssemblyTypeName: SandboxManager, Assembly-CSharp
+        m_MethodName: SetFieldsToButton
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1987303390
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -21684,7 +22080,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 2033569786}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 2121147618}
+        m_TargetAssemblyTypeName: SandboxManager, Assembly-CSharp
+        m_MethodName: SetFieldsToButton
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &2033569786
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -22089,7 +22497,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 2146396562}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 2121147618}
+        m_TargetAssemblyTypeName: SandboxManager, Assembly-CSharp
+        m_MethodName: SetFieldsToButton
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &2146396562
 MonoBehaviour:
   m_ObjectHideFlags: 0
