@@ -112,10 +112,11 @@ public class SandboxManager : MonoBehaviour
     test.LogData();
   }
 
+  // QoL make the button change color when an item is stored. Clear when null
   public void SetFieldsToButton()
   {
-    string buttonName = EventSystem.current.currentSelectedGameObject.name;
-    string[] splitString = buttonName.Split('.');
+    // Button names in "waveX.slotY" e.g. "1.1" format
+    string[] splitString = splitButtonName(GetButtonName());
 
     int wave = Int32.Parse(splitString[0]);
     int slot = Int32.Parse(splitString[1]);
@@ -127,7 +128,37 @@ public class SandboxManager : MonoBehaviour
 
   public void SpawnWave()
   {
-    Debug.Log("Wave was spawned");
+    // Button names in "SpawnWave.waveNumber" e.g. "SpawnWave.1" format
+    string[] splitString = splitButtonName(GetButtonName());
+
+    int wave = Int32.Parse(splitString[1]);
+
+    Debug.Log($"Wave {wave} was spawned");
+
+    foreach (SpawnSequencerDataType item in spawnSequenceData.AccessWaveData(wave))
+    {
+      if (item != null)
+      {
+        Vector3 spawnPos = new Vector3(item.GetX(), item.GetY(), 0);
+
+        spawnManager.SpawnEnemy(spawnPos, item.GetRot(), item.GetType());
+      }
+    }
+  }
+
+  public void SpawnSequence()
+  {
+
+  }
+
+  private string GetButtonName()
+  {
+    return EventSystem.current.currentSelectedGameObject.name;
+  }
+
+  private string[] splitButtonName(string buttonName)
+  {
+    return buttonName.Split('.');
   }
 
   private SpawnSequencerDataType CreateSpawnDataFromFields()

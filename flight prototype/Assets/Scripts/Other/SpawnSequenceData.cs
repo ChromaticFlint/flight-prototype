@@ -86,4 +86,11 @@ public class SpawnSequenceData
     Debug.Log(FullSequenceData[Wave][Slot]);
     Debug.Log(FullSequenceData[Wave][Slot].LogData());
   }
+
+  public List<SpawnSequencerDataType> AccessWaveData(int wave)
+  {
+    int Wave = wave - 1;
+
+    return FullSequenceData[Wave];
+  }
 }
