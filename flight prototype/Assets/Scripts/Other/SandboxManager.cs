@@ -66,11 +66,14 @@ public class SandboxManager : MonoBehaviour
   // Componenets
   private SpawnManager spawnManager;
   private SpawnSequenceData spawnSequenceData = new SpawnSequenceData();
+  private PlayerController player;
 
   // Start is called before the first frame update
   void Start()
   {
     spawnManager = GameObject.Find("SpawnManager").GetComponent<SpawnManager>();
+    player = GameObject.Find("Player").GetComponent<PlayerController>();
+
     PopulateEnemyTypeDropDown();
 
     spawnPostionX.text = "0";
@@ -105,6 +108,13 @@ public class SandboxManager : MonoBehaviour
     }
   }
 
+  public void UpdatePlayerFireRate()
+  {
+    if (player.fireRate != fireRate.value)
+    {
+      player.fireRate = fireRate.value;
+    }
+  }
 
   public void UpdateXField()
   {
@@ -132,6 +142,7 @@ public class SandboxManager : MonoBehaviour
     Vector3 temp = transform.rotation.eulerAngles;
     temp.z = sliderRotation.value;
 
+    // Update the dial
     dialIndicatior.transform.rotation = Quaternion.Euler(temp);
   }
 
