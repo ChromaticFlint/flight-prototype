@@ -134,6 +134,12 @@ public class SandboxManager : MonoBehaviour
   }
 
   // todo invert x and rot values in fields method
+  public void InvertData()
+  {
+    Debug.Log("The data inversion button was selected");
+  }
+
+
   // todo right click investication for clear field
   // todo change spawn values to sliders or ints
 
@@ -190,6 +196,19 @@ public class SandboxManager : MonoBehaviour
   {
     yield return new WaitForSeconds(timer);
     SpawnWave(wave);
+  }
+
+  // This currently doesn't reset the wave delays. There may need to be some
+  // Re-architecture to make that possible in a clean way.
+  public void ResetWave()
+  {
+    string[] name = splitButtonName(GetButtonName());
+    int wave = int.Parse(name[1]);
+
+
+    Debug.Log($"The following wave was reset: {wave}");
+
+    spawnSequenceData.ResetWaveData(wave);
   }
 
   private string GetButtonName()

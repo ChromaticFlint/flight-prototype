@@ -98,4 +98,12 @@ public class SpawnSequenceData
   {
     return FullSequenceData;
   }
+
+  public void ResetWaveData(int wave)
+  {
+    for (int i = 0; i < FullSequenceData[wave - 1].Count; i++)
+    {
+      FullSequenceData[wave - 1][i] = null;
+    }
+  }
 }
