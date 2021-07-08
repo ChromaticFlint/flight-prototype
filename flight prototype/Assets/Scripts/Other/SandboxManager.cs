@@ -15,6 +15,12 @@ public class SandboxManager : MonoBehaviour
   public TMP_Dropdown firePattern;
   public Slider fireRate;
 
+  // Spawn sliders
+  public Slider sliderPositionX;
+  public Slider sliderPositionY;
+  public Slider sliderRotation;
+  public Image dialIndicatior;
+
   // Spawn input fields
   public TMP_InputField spawnPostionX;
   public TMP_InputField spawnPostionY;
@@ -99,6 +105,61 @@ public class SandboxManager : MonoBehaviour
     }
   }
 
+
+  public void UpdateXField()
+  {
+    if (int.Parse(spawnPostionX.text) != sliderPositionX.value)
+    {
+      spawnPostionX.text = sliderPositionX.value.ToString();
+    }
+  }
+
+  public void UpdateYField()
+  {
+    if (int.Parse(spawnPostionY.text) != sliderPositionY.value)
+    {
+      spawnPostionY.text = sliderPositionY.value.ToString();
+    }
+  }
+
+  public void UpdateRotationField()
+  {
+    if (int.Parse(spawnRotation.text) != sliderRotation.value)
+    {
+      spawnRotation.text = sliderRotation.value.ToString();
+    }
+
+    Vector3 temp = transform.rotation.eulerAngles;
+    temp.z = sliderRotation.value;
+
+    dialIndicatior.transform.rotation = Quaternion.Euler(temp);
+  }
+
+  public void UpdateXSlider()
+  {
+    if (sliderPositionX.value != int.Parse(spawnPostionX.text))
+    {
+      sliderPositionX.value = int.Parse(spawnPostionX.text);
+    }
+  }
+
+  public void UpdateYSlider()
+  {
+    if (sliderPositionY.value != int.Parse(spawnPostionY.text))
+    {
+      sliderPositionY.value = int.Parse(spawnPostionY.text);
+    };
+  }
+
+
+  public void UpdateRotationSlider()
+  {
+    if (sliderRotation.value != int.Parse(spawnRotation.text))
+    {
+      sliderRotation.value = int.Parse(spawnRotation.text);
+    };
+  }
+
   public void SpawnEnemyActivate()
   {
     int posX = ValidateXPosition(spawnPostionX.text);
@@ -137,8 +198,18 @@ public class SandboxManager : MonoBehaviour
   public void InvertData()
   {
     Debug.Log("The data inversion button was selected");
+    spawnPostionX.text = InvertString(spawnPostionX.text);
+    spawnRotation.text = InvertString(spawnRotation.text);
   }
 
+  private string InvertString(string original)
+  {
+    int placeholder = int.Parse(original);
+    placeholder = placeholder * -1;
+    string result = placeholder.ToString();
+
+    return result;
+  }
 
   // todo right click investication for clear field
   // todo change spawn values to sliders or ints
