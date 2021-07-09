@@ -7,8 +7,6 @@ public class PawnProjectileController : MonoBehaviour
   [SerializeField]
   private float speed = 1.0f;
 
-
-  // Start is called before the first frame update
   void Awake()
   {
   }

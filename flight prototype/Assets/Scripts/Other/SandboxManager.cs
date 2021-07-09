@@ -8,7 +8,6 @@ using UnityEngine.EventSystems;
 
 public class SandboxManager : MonoBehaviour
 {
-
   // Player Options
   public Toggle godModeToggle;
   public bool godModeEnabled = true;
@@ -185,10 +184,6 @@ public class SandboxManager : MonoBehaviour
     SendFieldDataToStorage(1, 1);
 
     SpawnSequencerDataType test = spawnSequenceData.AccessSpawnData(1, 1);
-
-    Debug.Log("This is the true test");
-    // This is the true test
-    test.LogData();
   }
 
   // QoL make the button change color when an item is stored. Clear when null
@@ -203,9 +198,10 @@ public class SandboxManager : MonoBehaviour
     Debug.Log($"Button - Wave: {wave}, Slot: {slot} was selected");
 
     SendFieldDataToStorage(wave, slot);
+
+    setButtonActive(GetButtonName());
   }
 
-  // todo invert x and rot values in fields method
   public void InvertData()
   {
     Debug.Log("The data inversion button was selected");
@@ -221,9 +217,6 @@ public class SandboxManager : MonoBehaviour
 
     return result;
   }
-
-  // todo right click investication for clear field
-  // todo change spawn values to sliders or ints
 
   public void SpawnWave()
   {
@@ -287,10 +280,22 @@ public class SandboxManager : MonoBehaviour
     string[] name = splitButtonName(GetButtonName());
     int wave = int.Parse(name[1]);
 
-
     Debug.Log($"The following wave was reset: {wave}");
 
     spawnSequenceData.ResetWaveData(wave);
+
+    for (int i = 1; i < 7; i++) {
+      string ButtonName = $"{wave.ToString()}.{i.ToString()}";
+      setButtonInactive(ButtonName);
+    }
+  }
+
+  private void setButtonActive(string buttonName) {
+    GameObject.Find(buttonName).GetComponent<Image>().color = Color.green;
+  }
+
+  private void setButtonInactive(string buttonName) {
+    GameObject.Find(buttonName).GetComponent<Image>().color = Color.white;
   }
 
   private string GetButtonName()
@@ -326,10 +331,8 @@ public class SandboxManager : MonoBehaviour
     return spawnSequenceData.AccessSpawnData(wave, slot);
   }
 
-  // Change this validation to the DataType later
   private int ValidateXPosition(string text)
   {
-    // This is not great, fix later
     int posX = Int32.Parse(text);
 
     if (Math.Abs(posX) > 8)
@@ -341,10 +344,8 @@ public class SandboxManager : MonoBehaviour
     return posX;
   }
 
-  // Change this validation to the DataTypeHandler
   private int ValidateYPosition(string text)
   {
-    // This is not great, fix later
     int posY = Int32.Parse(spawnPostionY.text);
 
     if (posY <= 0 || posY >= 5)
@@ -356,10 +357,8 @@ public class SandboxManager : MonoBehaviour
     return posY;
   }
 
-  // Change this validation to the DataTypeHandler
   private int ValidateRotation(string text)
   {
-    // This is not great, fix later
     int angle = Int32.Parse(spawnRotation.text);
 
     if (angle < -90 || angle > 90)
@@ -371,8 +370,7 @@ public class SandboxManager : MonoBehaviour
     return angle;
   }
 
-
-  void PopulateEnemyTypeDropDown()
+  private void PopulateEnemyTypeDropDown()
   {
     List<string> enemyTypes = new List<string>();
 

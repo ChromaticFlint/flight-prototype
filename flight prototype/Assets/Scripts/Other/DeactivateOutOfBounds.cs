@@ -6,6 +6,7 @@ public class DeactivateOutOfBounds : MonoBehaviour
 {
   private float topBound = 10;
   private float lowerBound = -6;
+  private float sideBound = 10;
 
   // Start is called before the first frame update
   void Start()
@@ -23,6 +24,10 @@ public class DeactivateOutOfBounds : MonoBehaviour
 
     if (transform.position.y < lowerBound)
     {
+      gameObject.SetActive(false);
+    }
+
+    if (transform.position.x > sideBound || transform.position.x < -sideBound) {
       gameObject.SetActive(false);
     }
   }
