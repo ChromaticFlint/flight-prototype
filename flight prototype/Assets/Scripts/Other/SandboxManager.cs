@@ -9,6 +9,15 @@ using UnityEngine.EventSystems;
 public class SandboxManager : MonoBehaviour
 {
 
+  // -- TODO Clean up list
+  // TODO Add left and right bounds for bullet deactivation
+  // TODO add object pooling for enemy types
+  // TODO add color to buttons with data stored
+  // TODO move validation into object setters
+  // TODO break up the Sandbox manager?
+  // TODO look into starting performance jitters
+  // TODO look into out of index issue when test spawning waves that occurs infrequently
+
   // Player Options
   public Toggle godModeToggle;
   public bool godModeEnabled = true;
@@ -221,9 +230,6 @@ public class SandboxManager : MonoBehaviour
 
     return result;
   }
-
-  // todo right click investication for clear field
-  // todo change spawn values to sliders or ints
 
   public void SpawnWave()
   {
