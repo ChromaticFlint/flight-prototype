@@ -8,11 +8,6 @@ using UnityEngine.EventSystems;
 
 public class SandboxManager : MonoBehaviour
 {
-
-  // -- TODO Clean up list
-  // TODO add object pooling for enemy types :think: can this be dynamic based on availble types within the spawnmanager?
-  // TODO break up the Sandbox manager?
-
   // Player Options
   public Toggle godModeToggle;
   public bool godModeEnabled = true;
@@ -189,10 +184,6 @@ public class SandboxManager : MonoBehaviour
     SendFieldDataToStorage(1, 1);
 
     SpawnSequencerDataType test = spawnSequenceData.AccessSpawnData(1, 1);
-
-    Debug.Log("This is the true test");
-    // This is the true test
-    test.LogData();
   }
 
   // QoL make the button change color when an item is stored. Clear when null
@@ -340,10 +331,8 @@ public class SandboxManager : MonoBehaviour
     return spawnSequenceData.AccessSpawnData(wave, slot);
   }
 
-  // Change this validation to the DataType later
   private int ValidateXPosition(string text)
   {
-    // This is not great, fix later
     int posX = Int32.Parse(text);
 
     if (Math.Abs(posX) > 8)
@@ -355,10 +344,8 @@ public class SandboxManager : MonoBehaviour
     return posX;
   }
 
-  // Change this validation to the DataTypeHandler
   private int ValidateYPosition(string text)
   {
-    // This is not great, fix later
     int posY = Int32.Parse(spawnPostionY.text);
 
     if (posY <= 0 || posY >= 5)
@@ -370,10 +357,8 @@ public class SandboxManager : MonoBehaviour
     return posY;
   }
 
-  // Change this validation to the DataTypeHandler
   private int ValidateRotation(string text)
   {
-    // This is not great, fix later
     int angle = Int32.Parse(spawnRotation.text);
 
     if (angle < -90 || angle > 90)
@@ -384,7 +369,6 @@ public class SandboxManager : MonoBehaviour
 
     return angle;
   }
-
 
   private void PopulateEnemyTypeDropDown()
   {
