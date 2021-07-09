@@ -1,0 +1,130 @@
+Using pre-set license
+
+ COMMAND LINE ARGUMENTS:
+/Applications/Unity/Hub/Editor/2020.3.5f1/Unity.app/Contents/MacOS/Unity
+-adb2
+-batchMode
+-noUpm
+-name
+AssetImportWorker0
+-projectPath
+/Users/storm/Documents/unityProjects/flight-prototype/flight prototype
+-logFile
+Logs/AssetImportWorker0.log
+-srvPort
+51177
+Successfully changed project path to: /Users/storm/Documents/unityProjects/flight-prototype/flight prototype
+/Users/storm/Documents/unityProjects/flight-prototype/flight prototype
+Using Asset Import Pipeline V2.
+Refreshing native plugins compatible for Editor in 34.12 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Initialize engine version: 2020.3.5f1 (8095aa901b9b)
+[Subsystems] Discovering subsystems at path /Applications/Unity/Hub/Editor/2020.3.5f1/Unity.app/Contents/Resources/UnitySubsystems
+[Subsystems] Discovering subsystems at path /Users/storm/Documents/unityProjects/flight-prototype/flight prototype/Assets
+GfxDevice: creating device client; threaded=0
+2021-07-09 15:05:00.447 Unity[8603:175806] Color LCD preferred device: AMD Radeon Pro 5600M (high power)
+2021-07-09 15:05:00.447 Unity[8603:175806] Metal devices available: 2
+2021-07-09 15:05:00.447 Unity[8603:175806] 0: AMD Radeon Pro 5600M (high power)
+2021-07-09 15:05:00.447 Unity[8603:175806] 1: Intel(R) UHD Graphics 630 (low power)
+2021-07-09 15:05:00.448 Unity[8603:175806] Using device AMD Radeon Pro 5600M (high power)
+Initializing Metal device caps: AMD Radeon Pro 5600M
+Initialize mono
+Mono path[0] = '/Applications/Unity/Hub/Editor/2020.3.5f1/Unity.app/Contents/Managed'
+Mono path[1] = '/Applications/Unity/Hub/Editor/2020.3.5f1/Unity.app/Contents/MonoBleedingEdge/lib/mono/unityjit'
+Mono config path = '/Applications/Unity/Hub/Editor/2020.3.5f1/Unity.app/Contents/MonoBleedingEdge/etc'
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56603
+Begin MonoManager ReloadAssembly
+Registering precompiled unity dll's ...
+Register platform support module: /Applications/Unity/Hub/Editor/2020.3.5f1/PlaybackEngines/WebGLSupport/UnityEditor.WebGL.Extensions.dll
+Register platform support module: /Applications/Unity/Hub/Editor/2020.3.5f1/Unity.app/Contents/PlaybackEngines/MacStandaloneSupport/UnityEditor.OSXStandalone.Extensions.dll
+Registered in 0.000803 seconds.
+Native extension for OSXStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 33.80 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  4.881 seconds
+Platform modules already initialized, skipping
+Registering precompiled user dll's ...
+Registered in 0.000406 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for OSXStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 29.05 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.922 seconds
+Platform modules already initialized, skipping
+========================================================================
+Worker process is ready to serve import requests
+Launching external process: /Applications/Unity/Hub/Editor/2020.3.5f1/Unity.app/Contents/Tools/UnityShaderCompiler
+Launched and connected shader compiler UnityShaderCompiler after 0.01 seconds
+Refreshing native plugins compatible for Editor in 0.33 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1842 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 153.6 MB.
+System memory in use after: 153.6 MB.
+
+Unloading 23 unused Assets to reduce memory usage. Loaded Objects now: 2290.
+Total: 3.032028 ms (FindLiveObjects: 0.234760 ms CreateObjectMapping: 0.133790 ms MarkObjects: 2.469425 ms  DeleteObjects: 0.193277 ms)
+
+========================================================================
+Received Import Request.
+  path: Assets/Prefabs/Enemy 3 (Knight).prefab
+  artifactKey: Guid(fc449d429d0fd4fc2b3f1e76b88a4de5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Enemy 3 (Knight).prefab using Guid(fc449d429d0fd4fc2b3f1e76b88a4de5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd498fa48ed8e0e32a12cea3b0f41986e') in 1.419807 seconds
+  Import took 1.422538 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000227 seconds.
+  path: Assets/Prefabs/Enemy 1 (Pawn).prefab
+  artifactKey: Guid(3fa1faeae91034863bc102a9164507bd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Enemy 1 (Pawn).prefab using Guid(3fa1faeae91034863bc102a9164507bd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c0f5707f01d42f079bdf44d37c597442') in 0.016146 seconds
+  Import took 0.018713 seconds .
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.000613 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for OSXStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 0.32 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.934 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.36 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1823 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 160.0 MB.
+System memory in use after: 160.0 MB.
+
+Unloading 11 unused Assets to reduce memory usage. Loaded Objects now: 2301.
+Total: 1.884631 ms (FindLiveObjects: 0.223545 ms CreateObjectMapping: 0.058959 ms MarkObjects: 1.532773 ms  DeleteObjects: 0.068713 ms)
+
+========================================================================
+Received Import Request.
+  Time since last request: 51.883650 seconds.
+  path: Assets/Prefabs/Enemy 3 (Knight).prefab
+  artifactKey: Guid(fc449d429d0fd4fc2b3f1e76b88a4de5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Enemy 3 (Knight).prefab using Guid(fc449d429d0fd4fc2b3f1e76b88a4de5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3f2ada8acfd611eab7fd005bb1da0239') in 0.060680 seconds
+  Import took 0.063621 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 15.251488 seconds.
+  path: Assets/Scripts/Other/DeactivateOutOfBounds.cs
+  artifactKey: Guid(c7ca8763db76a45a5b1bd46e4755a4ba) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/Other/DeactivateOutOfBounds.cs using Guid(c7ca8763db76a45a5b1bd46e4755a4ba) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3399ac785e66a9b1e16750d5db7ef451') in 0.366514 seconds
+  Import took 0.369479 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 2.674654 seconds.
+  path: Assets/Prefabs/Enemy 3 (Knight).prefab
+  artifactKey: Guid(fc449d429d0fd4fc2b3f1e76b88a4de5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Enemy 3 (Knight).prefab using Guid(fc449d429d0fd4fc2b3f1e76b88a4de5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'febeff1ca9b7bf21c5714fd5ee131807') in 0.012435 seconds
+  Import took 0.015611 seconds .
+

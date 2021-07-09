@@ -42,6 +42,7 @@ GameObject:
   - component: {fileID: 1632391103}
   - component: {fileID: 3044469356831952013}
   - component: {fileID: 8927810349933363837}
+  - component: {fileID: 8695261111076539233}
   m_Layer: 0
   m_Name: Enemy 3 (Knight)
   m_TagString: Basic Enemy
@@ -79,9 +80,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemyWeapon: {fileID: 1704709753}
   health: 3
-  movementSpeed: 0
+  movementSpeed: 1.5
   currentHealth: 0
   fireRate: 0
+  rotation: 0
 --- !u!50 &3044469356831952013
 Rigidbody2D:
   serializedVersion: 4
@@ -129,6 +131,18 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!114 &8695261111076539233
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7820278713257522181}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c7ca8763db76a45a5b1bd46e4755a4ba, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &7820278713451265226
 GameObject:
   m_ObjectHideFlags: 0

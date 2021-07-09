@@ -10,13 +10,8 @@ public class SandboxManager : MonoBehaviour
 {
 
   // -- TODO Clean up list
-  // TODO Add left and right bounds for bullet deactivation
-  // TODO add object pooling for enemy types
-  // TODO add color to buttons with data stored
-  // TODO move validation into object setters
+  // TODO add object pooling for enemy types :think: can this be dynamic based on availble types within the spawnmanager?
   // TODO break up the Sandbox manager?
-  // TODO look into starting performance jitters
-  // TODO look into out of index issue when test spawning waves that occurs infrequently
 
   // Player Options
   public Toggle godModeToggle;
@@ -212,9 +207,10 @@ public class SandboxManager : MonoBehaviour
     Debug.Log($"Button - Wave: {wave}, Slot: {slot} was selected");
 
     SendFieldDataToStorage(wave, slot);
+
+    setButtonActive(GetButtonName());
   }
 
-  // todo invert x and rot values in fields method
   public void InvertData()
   {
     Debug.Log("The data inversion button was selected");
@@ -293,10 +289,22 @@ public class SandboxManager : MonoBehaviour
     string[] name = splitButtonName(GetButtonName());
     int wave = int.Parse(name[1]);
 
-
     Debug.Log($"The following wave was reset: {wave}");
 
     spawnSequenceData.ResetWaveData(wave);
+
+    for (int i = 1; i < 7; i++) {
+      string ButtonName = $"{wave.ToString()}.{i.ToString()}";
+      setButtonInactive(ButtonName);
+    }
+  }
+
+  private void setButtonActive(string buttonName) {
+    GameObject.Find(buttonName).GetComponent<Image>().color = Color.green;
+  }
+
+  private void setButtonInactive(string buttonName) {
+    GameObject.Find(buttonName).GetComponent<Image>().color = Color.white;
   }
 
   private string GetButtonName()
@@ -378,7 +386,7 @@ public class SandboxManager : MonoBehaviour
   }
 
 
-  void PopulateEnemyTypeDropDown()
+  private void PopulateEnemyTypeDropDown()
   {
     List<string> enemyTypes = new List<string>();
 
